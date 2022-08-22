@@ -1,0 +1,5 @@
+import xarray   as xr
+
+ds = xr.Dataset({'anom_SST':anom_SST1}, coords={'time':anom_SST1.time, 'lat':anom_SST1.lat, 
+                                               'time.season':anom_SST1['time.season'], 'lon':anom_SST1.lon})
+ds.to_netcdf("anom_SST.nc")
